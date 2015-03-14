@@ -1,25 +1,40 @@
-# Ember-cli-xdomain
+# ember-cli-xdomain
 
-This README outlines the details of collaborating on this Ember addon.
+This ember-cli addon injects xdomain into index.html.
+More info on xdomain at https://github.com/jpillora/xdomain
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+```
+npm install --save-dev ember-cli-xdomain
+```
 
-## Running
+# Usage
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+Install the addon and configure as below. Note that you will need to add a proxy.html to your slave. More info here: https://github.com/jpillora/xdomain#quick-usage
 
-## Running Tests
 
-* `ember test`
-* `ember test --server`
+# Configuration
 
-## Building
+This plugin uses the ember-cli project's configuration as defined in `config/environment.js`.
 
-* `ember build`
+```js
+// environment.js
 
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+    ENV.xdomain: {
+        slaves: {
+            'http://api.example.com': '/api/*'
+        },
+        debug: false,
+        timeout: 15e3
+    }
+```
+
+
+### Configuration Parameters
+
+For more detail on these please see https://github.com/jpillora/xdomain#api
+
+* `slaves` (Default: `null`): Slaves object
+* `debug` (Default: `false`): When true, XDomain will log actions to console
+* `timeout` (Default: `15e3`): Number of milliseconds until XDomains gives up waiting for an iframe to respond
