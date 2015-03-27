@@ -5,6 +5,11 @@ module.exports = {
   name: 'ember-cli-xdomain',
 
   contentFor: function(type, config) {
+      
+    if (config.environment === 'test') {
+      return;
+    }
+
     if (type === 'head-footer') {
 
       var output = '<script src="//cdn.rawgit.com/jpillora/xdomain/0.6.17/dist/xdomain.min.js"></script>';
