@@ -22,6 +22,7 @@ This plugin uses the ember-cli project's configuration as defined in `config/env
 // environment.js
 
     ENV.xdomain: {
+        src: '//mydomain.com/assets/xdomain.min.js',
         slaves: {
             'http://api.example.com': '/api/*'
         },
@@ -35,6 +36,7 @@ This plugin uses the ember-cli project's configuration as defined in `config/env
 
 For more detail on these please see https://github.com/jpillora/xdomain#api
 
+* `src` (Default: `//cdn.rawgit.com/jpillora/xdomain/0.6.17/dist/xdomain.min.js`): Location of xdomain script
 * `slaves` (Default: `null`): Slaves object
 * `debug` (Default: `false`): When true, XDomain will log actions to console
 * `timeout` (Default: `15e3`): Number of milliseconds until XDomains gives up waiting for an iframe to respond
