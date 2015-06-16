@@ -5,8 +5,8 @@ module.exports = {
   name: 'ember-cli-xdomain',
 
   contentFor: function(type, config) {
-      
-    if (config.environment === 'test') {
+
+    if (config.xdomain.isDisabled === true) {
       return;
     }
 
