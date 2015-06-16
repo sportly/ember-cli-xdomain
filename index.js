@@ -5,12 +5,12 @@ module.exports = {
   name: 'ember-cli-xdomain',
 
   contentFor: function(type, config) {
-
+      
     if (config.environment === 'test') {
       return;
     }
 
-    if (type === 'head-footer') {
+    if (type === 'head') {
 
       var output = '<script src="' + config.xdomain.src + '"></script>';
 
