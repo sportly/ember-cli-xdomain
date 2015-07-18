@@ -40,8 +40,5 @@ module.exports = {
       return output;
     }
 
-  },
-  isDevelopingAddon: function() {
-    return true;
   }
 };
