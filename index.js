@@ -12,7 +12,7 @@ module.exports = {
 
     if (type === 'head') {
 
-      let output = '<script src="' + config.xdomain.src + '"></script>';
+      var output = '<script src="' + config.xdomain.src + '"></script>';
 
       output += '<script type="text/javascript">';
       if (config.xdomain.slaves) {
