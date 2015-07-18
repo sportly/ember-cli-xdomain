@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-xdomain",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "Simple ember cli addon that injects xdomain into index.html",
   "directories": {
     "doc": "doc",
