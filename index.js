@@ -11,10 +11,14 @@ module.exports = {
     }
 
     if (type === 'head') {
+      var output = '<script type="text/javascript">' +
+        'window.xhook.addWithCredentials = false;' +
+        'window.jQuery.support.cors = true;' +
+        '</script>';
 
-      var output = '<script src="' + config.xdomain.src + '"></script>';
+      output += '<script src="' + config.xdomain.src + '"></script>';
 
-      output += '<script>';
+      output += '<script type="text/javascript">';
       if (config.xdomain.slaves) {
         output += 'xdomain.slaves({';
         for (var key in config.xdomain.slaves) {
