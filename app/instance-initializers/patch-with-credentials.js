@@ -1,5 +1,5 @@
-export function initialize(container) {
-  let config = container.lookupFactory('config:environment');
+export function initialize(instance) {
+  const config = instance.container.lookupFactory('config:environment');
 
   if (typeof config.xdomain === 'undefined' || config.xdomain.isDisabled === true) {
       return;
