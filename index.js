@@ -14,7 +14,7 @@ module.exports = {
       var output = '<script src="' + config.xdomain.src + '"></script>';
 
       if (config.xdomain.debug && config.xdomain.debugSrc !== null) {
-        output += '<script src="' + config.xdomain.debugSrc + '"></script>';
+        output = '<script src="' + config.xdomain.debugSrc + '"></script>';
       }
 
       output += '<script type="text/javascript">' +
