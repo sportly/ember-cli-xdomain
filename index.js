@@ -19,7 +19,6 @@ module.exports = {
 
       output += '<script type="text/javascript">' +
         'window.xhook.addWithCredentials = false;' +
-        'window.jQuery.support.cors = true;' +
         '</script>';
 
       output += '<script type="text/javascript">';
